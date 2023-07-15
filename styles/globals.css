@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Sahel;
+    src: url('./fonts/Sahel.eot');
+    src: url('./fonts/Sahel.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Sahel.woff2') format('woff2'),
+         url('./fonts/Sahel.woff') format('woff'),
+         url('./fonts/Sahel.ttf') format('truetype');
+    font-weight: normal;
+  }
+        
+  @font-face {
+    font-family: Sahel;
+    src: url('./fonts/Sahel-Bold.eot');
+    src: url('./fonts/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Sahel-Bold.woff2') format('woff2'),
+         url('./fonts/Sahel-Bold.woff') format('woff'),
+         url('./fonts/Sahel-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: Sahel;
+    src: url('./fonts/Sahel-Light.eot');
+    src: url('./fonts/Sahel-Light.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Sahel-Light.woff2') format('woff2'),  
+         url('./fonts/Sahel-Light.woff') format('woff'),
+         url('./fonts/Sahel-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+        
+  @font-face {
+    font-family: Sahel;
+    src: url('./fonts/Sahel-SemiBold.eot');
+    src: url('./fonts/Sahel-SemiBold.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Sahel-SemiBold.woff2') format('woff2'),  
+         url('./fonts/Sahel-SemiBold.woff') format('woff'),
+         url('./fonts/Sahel-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: Sahel;
+    src: url('./fonts/Sahel-Black.eot');
+    src: url('./fonts/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Sahel-Black.woff2') format('woff2'),  
+         url('./fonts/Sahel-Black.woff') format('woff'),
+         url('./fonts/Sahel-Black.ttf') format('truetype');
+    font-weight: 900;
+  }
+
+:root {
+    font-family: 'Sahel',sans-serif;
+    background-color: #f6f6f6;
+    line-height: 1.4;
+    scroll-behavior: smooth;
+}
+
+.link{
+    text-decoration: none;
+}
+
+.trendingMainContainer{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: #bbb;
+  z-index: 100;
+  transition: all 0.5s;
+  animation-name: bottom-border;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  
+}
+
+@keyframes bottom-border {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

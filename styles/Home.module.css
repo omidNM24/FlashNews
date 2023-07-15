@@ -1,0 +1,21 @@
+.homePageAllMainContainer{
+    display: grid;
+    width: 80%;
+    grid-template-columns: 3fr 1fr;
+}
+
+.newsCardsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
+.sectionTitle{
+    font-size: 25px;
+    margin: 0;
+}
+
+
