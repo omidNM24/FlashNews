@@ -6,7 +6,14 @@ export default class CustomDocument extends Document {
       <Html lang="fa" dir="rtl">
         <Head />
 
-        <body>
+        <body
+          style={{
+            margin: "0",
+            padding: "0",
+            boxSizing: "border-box",
+            width: "100%",
+          }}
+        >
           <Main />
           <NextScript />
         </body>

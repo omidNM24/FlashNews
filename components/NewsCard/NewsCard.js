@@ -9,7 +9,7 @@ function newsCard(props) {
   return (
     <Link key={props.id} href={`/${props.slug}`} className="link">
       <div
-        className="w-full h-[500px] flex justify-center  m-2 cursor-pointer md:bg-white md:h-[500px] xs:h-[250px] vvs:h-[150px]"
+        className="w-full h-[500px] flex justify-center   cursor-pointer md:bg-white md:h-[500px] xs:h-[250px] vvs:h-[150px]"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
       >

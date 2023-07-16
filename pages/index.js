@@ -36,9 +36,9 @@ export default function Home({ sportArticles, newsArticles, hotNewsArticle }) {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="grid min-h-screen grid-cols-4 xl:w-10/12 xl:grid-cols-4 lg:w-11/12 lg:grid-cols-4 md:w-11/12 vvs:grid-cols-1">
+      <div className="grid min-h-screen grid-cols-4 xl:w-10/12 xl:grid-cols-4 lg:w-11/12 lg:grid-cols-4 md:w-11/12 vvs:w-full vvs:grid-cols-1">
         <div className="flex flex-col items-center col-span-3">
-          <div className="flex flex-col justify-center gap-5 items-left md:p-7 vvs:p-0">
+          <div className="flex flex-col justify-center gap-5 items-left md:p-0 vvs:p-0">
             <HotNews data={hotNewsArticle} />
             <h3 className="text-3xl font-bold text-b2">
               <Link className="link " href="/news">
