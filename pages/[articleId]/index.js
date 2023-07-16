@@ -119,7 +119,7 @@ const ArticleDetails = ({ data, url }) => {
         </article>
 
         <Comment data={data} />
-        <Share url={url} data={data} />
+        <Share url={url} title={data.title} />
         {similarArticles.length !== 0 ? (
           <div>
             <h1 className="mb-4 text-3xl font-semibold tracking-tight text-b4">

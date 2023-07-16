@@ -14,14 +14,13 @@ import { MdEmail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 const Share = (props) => {
-  console.log(`https://flash-news24.netlify.app/${props.url.articleId}`);
   return (
     <div className="flex justify-center w-full my-10">
       <div className="flex items-center justify-between w-full gap-2 text-lg text-white">
         <div className="w-full  h-[50px] bg-[#3b5998] hover:bg-[#2b4782]">
           <FacebookShareButton
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
-            quote={props.data.title}
+            quote={props.title}
             hashtag="#muo"
             className="flex items-center justify-center w-full h-full gap-2"
           >
@@ -32,7 +31,7 @@ const Share = (props) => {
         <div className="w-full  h-[50px] bg-[#00acee] hover:bg-[#008cc3]">
           <TwitterShareButton
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
-            title={props.data.title}
+            title={props.title}
             hashtag="#muo"
             className="flex items-center justify-center w-full h-full gap-2"
           >
@@ -43,7 +42,7 @@ const Share = (props) => {
         <div className="w-full  h-[50px] bg-b5 hover:bg-[#444]">
           <EmailShareButton
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
-            subject={props.data.title}
+            subject={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
           >
             <p className="md:block vvs:hidden">Email</p>{" "}
@@ -53,7 +52,7 @@ const Share = (props) => {
         <div className="w-full  h-[50px] bg-[#25d366] hover:bg-[#16b14f]">
           <WhatsappShareButton
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
-            title={props.data.title}
+            title={props.title}
             separator="  "
             className="flex items-center justify-center w-full h-full gap-2"
           >
@@ -64,7 +63,7 @@ const Share = (props) => {
         <div className="w-full  h-[50px] bg-[#0072b1] hover:bg-[#00689f]">
           <LinkedinShareButton
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
-            title={props.data.title}
+            title={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
           >
             <p className="md:block vvs:hidden">Share</p>{" "}
@@ -74,7 +73,7 @@ const Share = (props) => {
         <div className="w-full  h-[50px] bg-[#FF4500] hover:bg-[#e53d00]">
           <RedditShareButton
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
-            title={props.data.title}
+            title={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
           >
             <p className="md:block vvs:hidden">Share</p>{" "}
