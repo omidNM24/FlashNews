@@ -37,15 +37,15 @@ export default function Home({ sportArticles, newsArticles, hotNewsArticle }) {
   return (
     <div className="flex justify-center w-full">
       <div className="grid min-h-screen grid-cols-4 xl:w-10/12 xl:grid-cols-4 lg:w-11/12 lg:grid-cols-4 md:w-11/12 vvs:w-full vvs:grid-cols-1">
-        <div className="flex flex-col items-center col-span-3">
-          <div className="flex flex-col justify-center gap-5 items-left md:p-0 vvs:p-0">
-            <HotNews data={hotNewsArticle} />
+        <div className="flex flex-col items-center col-span-3 gap-5 md:p-5 vvs:p-0">
+          <HotNews data={hotNewsArticle} />
+          <div className="box-border flex flex-col justify-center gap-5 p-2 items-left ">
             <h3 className="text-3xl font-bold text-b2">
               <Link className="link " href="/news">
                 اخبار
               </Link>
             </h3>
-            <div className="grid items-center justify-center w-full grid-cols-3 gap-5 md:grid vvs:flex vvs:flex-col">
+            <div className="grid items-center justify-center w-full grid-cols-3 gap-5 md:grid vvs:flex vvs:flex-col vvs:divide-y vvs:divide-w4">
               {newsArticles.map((article) => (
                 <NewsCard
                   key={article._id}
@@ -60,13 +60,13 @@ export default function Home({ sportArticles, newsArticles, hotNewsArticle }) {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center gap-5 items-left p-7">
+          <div className="box-border flex flex-col justify-center gap-5 p-2 items-left ">
             <h3 className="text-3xl font-bold text-b2">
               <Link className="link" href="/sports">
                 ورزش
               </Link>
             </h3>
-            <div className="grid items-center justify-center w-full grid-cols-3 gap-5 md:grid vvs:flex vvs:flex-col xs:divide-y">
+            <div className="grid items-center justify-center w-full grid-cols-3 gap-5 md:grid vvs:flex vvs:flex-col vvs:divide-y vvs:divide-w4">
               {sportArticles.map((article) => (
                 <NewsCard
                   key={article._id}
