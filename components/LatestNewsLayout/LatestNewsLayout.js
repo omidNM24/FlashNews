@@ -25,7 +25,11 @@ const LatestNewsLayout = ({ newsArticles }) => {
       </Link>
       <div className="box-border grid justify-center w-full grid-cols-2 gap-5 xs:gap-5 vvs:gap-3">
         {squareArticles.map((article) => (
-          <Link href={`/${article.slug.current}`} className="link ">
+          <Link
+            href={`/${article.slug.current}`}
+            key={article._id}
+            className="link "
+          >
             <div
               className="w-full h-[350px] bg-center xs:h-[350px] vvs:h-[250px] bg-cover shadow-[inset_0_-250px_100px_-70px_rgb(0,0,0)] flex flex-col box-border justify-end text-w2 p-5 cursor-pointer hover:shadow-[inset_0_-250px_100px_-90px_rgb(0,0,0)]"
               style={{
