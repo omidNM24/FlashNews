@@ -3,6 +3,7 @@ import Trending from "@/components/Trending/Trending";
 import LatestNewsLayout from "@/components/LatestNewsLayout/LatestNewsLayout";
 import Weather from "../Weather/Weather";
 import HorizontalNewsCard from "../horizontalNewsCard/horizontalNewsCard";
+import Head from "next/head";
 
 const PageLayout = ({ newsArticles, trendingArticles }) => {
   const remainingArticles = newsArticles.slice(3);

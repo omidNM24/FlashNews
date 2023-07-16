@@ -6,7 +6,7 @@ export default class CustomDocument extends Document {
       <Html lang="fa" dir="rtl">
         <Head />
 
-        <body className="">
+        <body>
           <Main />
           <NextScript />
         </body>
