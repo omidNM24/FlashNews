@@ -12,11 +12,12 @@ const client = createClient({
   apiVersion: "v2021-10-21",
   useCdn: false,
 });
+import Head from "next/head";
 
 export default function Home({ sportArticles, newsArticles, hotNewsArticle }) {
   if (!(sportArticles || newsArticles || hotNewsArticle)) {
     return (
-      <div className="flex justify-center items-center w-full min-h-screen">
+      <div className="flex items-center justify-center w-full min-h-screen">
         <h1 className="text-4xl font-semibold text-red-800 xxs:text-4xl vs:text-3xl vvs:text-2xl">
           خطا حین گرفتن اطلاعات
         </h1>
@@ -45,6 +46,21 @@ export default function Home({ sportArticles, newsArticles, hotNewsArticle }) {
 
   return (
     <div className="flex justify-center w-full">
+      <Head>
+        <title>مهم ترین اخبار روز افغانستان و جهان | نیوز فلش</title>
+        <meta
+          name="description"
+          content="با صفحه خبری ما در جریان آخرین اخبار و به روزرسانی‌ها از سراسر جهان باشید."
+        ></meta>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+        <meta
+          name="keywords"
+          content=" خبر ها, اخبار افغانستان, اخبار تازه, فلش نیوز,اخبار روز"
+        ></meta>
+      </Head>
       <div className="grid min-h-screen grid-cols-4 xl:w-10/12 xl:grid-cols-4 lg:w-11/12 lg:grid-cols-4 md:w-11/12 vvs:w-full vvs:grid-cols-1">
         <div className="flex flex-col items-center col-span-3 gap-5 md:p-5 vvs:p-0">
           <HotNews data={hotNewsArticle} />
