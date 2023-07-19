@@ -12,7 +12,7 @@ const HotNews = ({ data }) => {
           backgroundImage: `url(${data.mainImage.url})`,
         }}
       >
-        <div className=" p-5 h-[50%] bg-white bg-opacity-70">
+        <div className=" p-5 flex flex-col justify-between h-[50%] bg-white bg-opacity-70 xxs:p5 vvs:px-2">
           <h1 className="text-3xl font-semibold leading-tight text-b2">
             {data.title}
           </h1>

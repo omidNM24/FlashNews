@@ -16,8 +16,6 @@ const Weather = (props) => {
     getWeatherData();
   }, []);
 
-  console.log(weatherData);
-
   if (!weatherData) return <p>loading...</p>;
 
   return (

@@ -42,7 +42,6 @@ function Navigation() {
           className="text-3xl cursor-pointer md:hidden vvs:block"
           onClick={() => {
             setStatus(!status);
-            console.log(status);
           }}
         />
         <SlideOver
@@ -51,7 +50,6 @@ function Navigation() {
           Closebtn={Closebtn}
           overlay={overlay}
           close={(stat) => {
-            console.log("closing!!!!!");
             setStatus(stat);
           }}
         />

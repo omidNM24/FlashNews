@@ -3,8 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Trending = ({ data }) => {
-  console.log(data);
-
   return (
     <div className="flex flex-col items-center gap-6 px-3 py-5 bg-white">
       <h1 className="m-0 text-xl font-medium tracking-tighter">

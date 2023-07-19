@@ -14,6 +14,15 @@ const client = createClient({
 });
 
 export default function Home({ sportArticles, newsArticles, hotNewsArticle }) {
+  if (!(sportArticles || newsArticles || hotNewsArticle)) {
+    return (
+      <div className="flex justify-center items-center w-full min-h-screen">
+        <h1 className="text-4xl font-semibold text-red-800 xxs:text-4xl vs:text-3xl vvs:text-2xl">
+          خطا حین گرفتن اطلاعات
+        </h1>
+      </div>
+    );
+  }
   const [trending, setTrending] = useState([]);
   useEffect(() => {
     async function fetchHotNews() {
@@ -124,7 +133,6 @@ export async function getStaticProps() {
       revalidate: 600,
     };
   } catch (error) {
-    console.log("Error fetching data:", error);
     return {
       props: {
         newsArticles: null,

@@ -10,7 +10,15 @@ const client = createClient({
 });
 
 const Sports = ({ sportsArticles }) => {
-  console.log(sportsArticles);
+  if (!sportsArticles) {
+    return (
+      <div className="flex justify-center items-center w-full min-h-screen">
+        <h1 className="text-4xl font-semibold text-red-800 xxs:text-4xl vs:text-3xl vvs:text-2xl">
+          خطا حین گرفتن اطلاعات
+        </h1>
+      </div>
+    );
+  }
   const [trending, setTrending] = useState([]);
   useEffect(() => {
     async function fetchHotSportArticles() {
@@ -52,7 +60,6 @@ export async function getStaticProps() {
       revalidate: 1200,
     };
   } catch (error) {
-    console.log("Error fetching data:", error);
     return {
       props: {
         sportsArticles: null,

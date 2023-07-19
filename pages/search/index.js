@@ -12,6 +12,7 @@ const Search = () => {
   const [sortOption, setSortOption] = useState("تازه ترین");
   const [sortedArticles, setSortedArticles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   const content = ["تازه ترین", "قدیمی ترین", "پربازدید ترین"];
 
@@ -40,10 +41,11 @@ const Search = () => {
 
         setSportsArticles(articles);
         setLoading(false);
+        setError(false);
       } catch (error) {
-        console.log("Error fetching data:", error);
         setSportsArticles([]);
         setLoading(false);
+        setError(true);
       }
     };
 
@@ -74,6 +76,16 @@ const Search = () => {
 
     setSortedArticles(sortedData);
   }, [sportsArticles, sortOption]);
+
+  if (error) {
+    return (
+      <div className="flex justify-center items-center w-full min-h-screen">
+        <h1 className="text-4xl font-semibold text-red-800 xxs:text-4xl vs:text-3xl vvs:text-2xl">
+          خطا حین گرفتن اطلاعات
+        </h1>
+      </div>
+    );
+  }
 
   const handleSort = (option) => {
     setSortOption(option);

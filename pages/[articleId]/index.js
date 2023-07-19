@@ -62,14 +62,13 @@ const ArticleDetails = ({ data, url }) => {
         });
         setSimilarArticles(similar);
       } catch (err) {
-        console.log(err);
+        setSimilarArticles(false);
       }
     };
 
     fetchData();
   }, [data]);
 
-  console.log(data.content);
   const myPortableTextComponents = {
     types: {
       image: ({ value }) =>
@@ -119,8 +118,8 @@ const ArticleDetails = ({ data, url }) => {
         </article>
 
         <Comment data={data} />
-        <Share url={url} title={data.title} />
-        {similarArticles.length !== 0 ? (
+        <Share url={url} id={data._id} title={data.title} />
+        {similarArticles.length !== 0 || !similarArticles ? (
           <div>
             <h1 className="mb-4 text-3xl font-semibold tracking-tight text-b4">
               مطالب مشابه{" "}
@@ -180,7 +179,7 @@ export async function getStaticProps({ params }) {
   try {
     await client.patch(newsArticles[0]._id).inc({ views: 1 }).commit();
   } catch (err) {
-    console.log(err);
+    console.log("could not increment views");
   }
   return {
     props: {

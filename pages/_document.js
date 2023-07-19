@@ -4,7 +4,9 @@ export default class CustomDocument extends Document {
   render() {
     return (
       <Html lang="fa" dir="rtl">
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="/images/logo.png" />
+        </Head>
 
         <body
           style={{

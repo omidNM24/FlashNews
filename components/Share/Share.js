@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
   FacebookShareButton,
   EmailShareButton,
@@ -13,7 +14,40 @@ import { BsLinkedin } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { IoLogoWhatsapp } from "react-icons/io";
 
+import { createClient } from "@sanity/client";
+const client = createClient({
+  projectId: "jiq87vtf",
+  dataset: "production",
+  token: process.env.REACT_APP_TOKEN,
+  apiVersion: "v2021-10-21",
+  useCdn: false,
+});
+
 const Share = (props) => {
+  const [error, setError] = useState(null);
+  async function incShareCount(company) {
+    try {
+      await client
+        .patch(props.id)
+        .inc({ [`shares.${company}`]: 1 })
+        .commit();
+    } catch (error) {
+      console.error("Error while adding share count:", error);
+    }
+  }
+  const handleEmailShare = () => {
+    const subject = encodeURIComponent(props.title);
+    const body = encodeURIComponent(
+      `Check out this article: https://flash-news24.netlify.app/${props.url.articleId}`
+    );
+
+    const emailLink = `mailto:?subject=${subject}&body=${body}`;
+    window.open(emailLink, "_blank");
+
+    setTimeout(() => {
+      incShareCount("email");
+    }, 1000);
+  };
   return (
     <div className="flex justify-center w-full my-10">
       <div className="flex items-center justify-between w-full gap-2 text-lg text-white">
@@ -23,6 +57,7 @@ const Share = (props) => {
             quote={props.title}
             hashtag="#muo"
             className="flex items-center justify-center w-full h-full gap-2"
+            onClick={() => incShareCount("facebook")}
           >
             <p className="md:block vvs:hidden">Share</p>{" "}
             <TfiFacebook className="text-2xl" />
@@ -34,6 +69,7 @@ const Share = (props) => {
             title={props.title}
             hashtag="#muo"
             className="flex items-center justify-center w-full h-full gap-2"
+            onClick={() => incShareCount("twitter")}
           >
             <p className="md:block vvs:hidden">Tweet</p>{" "}
             <BsTwitter className="text-2xl" />
@@ -44,6 +80,7 @@ const Share = (props) => {
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
             subject={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
+            onClick={() => handleEmailShare()}
           >
             <p className="md:block vvs:hidden">Email</p>{" "}
             <MdEmail className="text-2xl" />
@@ -55,6 +92,7 @@ const Share = (props) => {
             title={props.title}
             separator="  "
             className="flex items-center justify-center w-full h-full gap-2"
+            onClick={() => incShareCount("whatsApp")}
           >
             <p className="md:block vvs:hidden">Share</p>{" "}
             <IoLogoWhatsapp className="text-2xl" />
@@ -65,6 +103,7 @@ const Share = (props) => {
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
             title={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
+            onClick={() => incShareCount("linkedIn")}
           >
             <p className="md:block vvs:hidden">Share</p>{" "}
             <BsLinkedin className="text-2xl" />
@@ -75,6 +114,7 @@ const Share = (props) => {
             url={`https://flash-news24.netlify.app/${props.url.articleId}`}
             title={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
+            onClick={() => incShareCount("reddit")}
           >
             <p className="md:block vvs:hidden">Share</p>{" "}
             <BsReddit className="text-2xl" />
