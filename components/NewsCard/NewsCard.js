@@ -34,7 +34,7 @@ function newsCard(props) {
               </p>
             </div>
             <p className="pr-1 text-xs border-r-2 border-red-600 text-b5 ">
-              {props.tags.join(" | ")}
+              {props.tags.slice(0, 1)}
             </p>
           </div>
         </div>

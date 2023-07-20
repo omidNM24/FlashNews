@@ -19,7 +19,7 @@ const LatestNewsLayout = ({ newsArticles }) => {
             {newsArticles[0].excerpt}
           </p>
           <p className="pr-1 my-0 text-base border-r-2 border-red-400 text-w5 text-opacity-80">
-            {newsArticles[0].tags}
+            {newsArticles[0].tags.slice(0, 1)}
           </p>
         </div>
       </Link>

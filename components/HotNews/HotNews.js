@@ -21,7 +21,7 @@ const HotNews = ({ data }) => {
           </p>
 
           <p className="pr-1 my-0 text-base border-r-2 border-red-400 text-b4 text-opacity-80">
-            {data.tags}
+            {data.tags.slice(0, 1)}
           </p>
         </div>
       </div>

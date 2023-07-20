@@ -33,7 +33,7 @@ const horizontalNewsCard = ({ article }) => {
             </p>
           </div>
           <p className="pr-1 mx-0 text-base border-r-2 border-red-500 text-b5 justify-self-end xs:text-base vvs:text-sm">
-            {article.tags}
+            {article.tags.slice(0, 1)}
           </p>
         </div>
       </div>

@@ -90,7 +90,7 @@ const ArticleDetails = ({ data, url }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         ></meta>
-        <meta name="keywords" content={data.tags.join(" ")}></meta>
+        <meta name="keywords" content={data.tags.join(",")}></meta>
       </Head>
       <div className="min-h-screen pt-5 xl:w-6/12 lg:w-7/12 md:w-8/12 sm:w-9/12 xs:w-10/12 vvs:w-11/12">
         <h1 className="text-4xl font-semibold text-b2 sm:text-4xl vvs:text-3xl">
