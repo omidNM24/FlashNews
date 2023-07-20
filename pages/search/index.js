@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import styles from "./search.module.css";
 import HorizontalNewsCard from "@/components/horizontalNewsCard/horizontalNewsCard";
 import { FaSadTear } from "react-icons/fa";
+import { Head } from "next/document";
 
 const Search = () => {
   const [sportsArticles, setSportsArticles] = useState([]);
@@ -79,7 +80,7 @@ const Search = () => {
 
   if (error) {
     return (
-      <div className="flex justify-center items-center w-full min-h-screen">
+      <div className="flex items-center justify-center w-full min-h-screen">
         <h1 className="text-4xl font-semibold text-red-800 xxs:text-4xl vs:text-3xl vvs:text-2xl">
           خطا حین گرفتن اطلاعات
         </h1>
