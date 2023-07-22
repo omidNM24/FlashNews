@@ -159,7 +159,7 @@ export async function getStaticPaths() {
     slug
   }`);
   const paths = articleIds.map((article) => ({
-    params: { articleId: `${encodeURIComponent(article.slug.current)}` },
+    params: { articleId: `${decodeURIComponent(article.slug.current)}` },
   }));
   return {
     paths: paths,
@@ -169,7 +169,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const newsArticles =
-    await client.fetch(`*[slug.current == "${params.articleId}"]{
+    await client.fetch(`*[slug.current == "${decodeURIComponent(
+      params.articleId
+    )}"]{
           ...,
           "mainImage": mainImage.asset->,
           "content": content[],

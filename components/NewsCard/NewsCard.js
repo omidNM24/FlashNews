@@ -9,7 +9,7 @@ function newsCard(props) {
   return (
     <Link
       key={props.id}
-      href={`/${encodeURIComponent(props.slug)}`}
+      href={`/${decodeURIComponent(props.slug)}`}
       className="link"
     >
       <div
