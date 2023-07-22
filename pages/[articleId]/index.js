@@ -159,7 +159,7 @@ export async function getStaticPaths() {
     slug
   }`);
   const paths = articleIds.map((article) => ({
-    params: { articleId: `${article.slug.current}` },
+    params: { articleId: `${encodeURIComponent(article.slug.current)}` },
   }));
   return {
     paths: paths,
