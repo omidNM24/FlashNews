@@ -7,11 +7,7 @@ function newsCard(props) {
   const zoomStyle = { transform: "scale(1.1)" };
 
   return (
-    <Link
-      key={props.id}
-      href={`/${decodeURIComponent(props.slug)}`}
-      className="link"
-    >
+    <Link key={props.id} href={`/${props.slug}`} className="link">
       <div
         className="w-full h-[500px] flex justify-center cursor-pointer md:bg-white md:h-[500px] xs:h-[250px] vvs:h-[150px]"
         onMouseEnter={() => setHovered(true)}
