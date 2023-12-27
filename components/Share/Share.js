@@ -38,7 +38,7 @@ const Share = (props) => {
   const handleEmailShare = () => {
     const subject = encodeURIComponent(props.title);
     const body = encodeURIComponent(
-      `Check out this article: https://flash-news24.netlify.app/${props.url.articleId}`
+      `Check out this article: https://afghankhabar.netlify.app/${props.url.articleId}`
     );
 
     const emailLink = `mailto:?subject=${subject}&body=${body}`;
@@ -53,7 +53,7 @@ const Share = (props) => {
       <div className="flex items-center justify-between w-full gap-2 text-lg text-white">
         <div className="w-full  h-[50px] bg-[#3b5998] hover:bg-[#2b4782]">
           <FacebookShareButton
-            url={`https://flash-news24.netlify.app/${props.url.articleId}`}
+            url={`https://afghankahabar.netlify.app/${props.url.articleId}`}
             quote={props.title}
             hashtag="#muo"
             className="flex items-center justify-center w-full h-full gap-2"
@@ -65,7 +65,7 @@ const Share = (props) => {
         </div>
         <div className="w-full  h-[50px] bg-[#00acee] hover:bg-[#008cc3]">
           <TwitterShareButton
-            url={`https://flash-news24.netlify.app/${props.url.articleId}`}
+            url={`https://afghankahabar.netlify.app/${props.url.articleId}`}
             title={props.title}
             hashtag="#muo"
             className="flex items-center justify-center w-full h-full gap-2"
@@ -77,7 +77,7 @@ const Share = (props) => {
         </div>
         <div className="w-full  h-[50px] bg-b5 hover:bg-[#444]">
           <EmailShareButton
-            url={`https://flash-news24.netlify.app/${props.url.articleId}`}
+            url={`https://afghankahabar.netlify.app/${props.url.articleId}`}
             subject={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
             onClick={() => handleEmailShare()}
@@ -88,7 +88,7 @@ const Share = (props) => {
         </div>
         <div className="w-full  h-[50px] bg-[#25d366] hover:bg-[#16b14f]">
           <WhatsappShareButton
-            url={`https://flash-news24.netlify.app/${props.url.articleId}`}
+            url={`https://afghankahabar.netlify.app/${props.url.articleId}`}
             title={props.title}
             separator="  "
             className="flex items-center justify-center w-full h-full gap-2"
@@ -100,7 +100,7 @@ const Share = (props) => {
         </div>
         <div className="w-full  h-[50px] bg-[#0072b1] hover:bg-[#00689f]">
           <LinkedinShareButton
-            url={`https://flash-news24.netlify.app/${props.url.articleId}`}
+            url={`https://afghankahabar.netlify.app/${props.url.articleId}`}
             title={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
             onClick={() => incShareCount("linkedIn")}
@@ -111,7 +111,7 @@ const Share = (props) => {
         </div>
         <div className="w-full  h-[50px] bg-[#FF4500] hover:bg-[#e53d00]">
           <RedditShareButton
-            url={`https://flash-news24.netlify.app/${props.url.articleId}`}
+            url={`https://afghankahabar.netlify.app/${props.url.articleId}`}
             title={props.title}
             className="flex items-center justify-center w-full h-full gap-2"
             onClick={() => incShareCount("reddit")}

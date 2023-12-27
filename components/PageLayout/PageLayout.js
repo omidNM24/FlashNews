@@ -11,7 +11,7 @@ const PageLayout = ({ newsArticles, trendingArticles }) => {
   return (
     <div className="flex justify-center w-full">
       <Head>
-        <title>مهم ترین اخبار روز افغانستان و جهان | نیوز فلش</title>
+        <title>مهم ترین اخبار روز افغانستان و جهان | افغان خبر</title>
         <meta
           name="description"
           content="با صفحه خبری ما در جریان آخرین اخبار و به روزرسانی‌ها از سراسر جهان باشید."
@@ -22,7 +22,7 @@ const PageLayout = ({ newsArticles, trendingArticles }) => {
         ></meta>
         <meta
           name="keywords"
-          content=" خبر ها, اخبار افغانستان, اخبار تازه, فلش نیوز,اخبار روز"
+          content=" خبر ها, اخبار افغانستان, اخبار تازه,افغان خبر,اخبار روز"
         ></meta>
       </Head>
       <div className="flex gap-[50px] xl:w-10/12 lg:flex-row lg:w-11/12 md:w-11/12 vvs:flex-col min-h-screen">

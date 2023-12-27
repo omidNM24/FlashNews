@@ -58,7 +58,7 @@ export default function Home({ sportArticles, newsArticles, hotNewsArticle }) {
         ></meta>
         <meta
           name="keywords"
-          content="خبر ها, اخبار افغانستان, اخبار تازه, فلش نیوز,اخبار روز, افغانستان"
+          content="خبر ها, اخبار افغانستان, اخبار تازه,افغان خبر,اخبار روز, افغانستان"
         ></meta>
       </Head>
       <div className="grid min-h-screen grid-cols-4 xl:w-10/12 xl:grid-cols-4 lg:w-11/12 lg:grid-cols-4 md:w-11/12 vvs:w-full vvs:grid-cols-1">

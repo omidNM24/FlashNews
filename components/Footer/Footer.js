@@ -1,7 +1,5 @@
 import { TfiFacebook } from "react-icons/tfi";
-import { BsTwitter } from "react-icons/bs";
-import { SiYoutube } from "react-icons/si";
-import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedinIn, FaGithub, FaGlobe } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -10,36 +8,37 @@ const Footer = () => {
         <h2 className="text-2xl">ما را دنبال کنید:</h2>
         <div className="flex items-center justify-center gap-3">
           <a
-            href="/"
+            href="https://m.facebook.com/profile.php/?id=100090176271304"
             className="text-2xl hover:text-white hover:bg-[#3b5998] p-2 transition-all"
             target="_blank"
           >
             <TfiFacebook />
           </a>
           <a
-            href="/"
-            className="text-2xl hover:text-white hover:bg-[#00acee] p-2 transition-all"
+            href="https://github.com/omidNM24"
+            className="p-2 text-2xl transition-all hover:text-white hover:bg-black"
             target="_blank"
           >
-            <BsTwitter />
+            <FaGithub />
           </a>
           <a
-            href="/"
-            className="p-2 text-2xl transition-all hover:text-white hover:bg-red-600"
+            href="https://af.linkedin.com/in/omid24"
+            className="p-2 text-2xl transition-all hover:text-white hover:bg-[#0077b5]"
             target="_blank"
           >
-            <SiYoutube />
+            <FaLinkedinIn />
           </a>
           <a
-            href="/"
-            className="p-2 text-2xl transition-all hover:text-white hover:bg-gradient-to-r hover:from-yellow-400 hover:via-red-600 hover:to-purple-700"
+            href="https://omid24.netlify.app/"
+            className="p-2 text-2xl transition-all hover:text-black hover:bg-white"
             target="_blank"
           >
-            <RiInstagramFill />
+            <FaGlobe />
           </a>
         </div>
         <p className="text-sm text-zinc-400">
-          .Copyright © {new Date().getFullYear()} ____ News. All rights reserved
+          .Copyright © {new Date().getFullYear()} Omid Nomani. All rights
+          reserved
         </p>
       </div>
     </div>
